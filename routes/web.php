@@ -5,5 +5,5 @@ use Psr\Http\Message\ServerRequestInterface;
 use Slim\App;
 
 return function (App $app) {
-    $app->get('/', 'App\Controllers\BaseController:index')->setName('index');
+    $app->get('/', 'App\Controllers\IndexController:index')->setName('index');
 };
