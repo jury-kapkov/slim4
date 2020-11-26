@@ -2,6 +2,8 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-    <h1 class="text-center" style="margin-top: 48px">Добро пожаловать в мой скромный проект!</h1>
-{#    <p>Hello, {{ name }}!</p>#}
+    <h1 class="text-center" style="margin: 48px 0">Добро пожаловать в мой скромный проект!</h1>
+    <p>Идентификатор пользователя: <b class="text-primary">{{ id_visitor }}</b></p>
+    <p>Время обновления сессии: <b class="text-primary">{{ updated_at }}</b> <span style="position: relative; top: -6px;" class="badge badge-warning">10 мин</span></p>
+    <p>Идентификатор сессии: <b class="text-primary">{{ id_session }}</b></p>
 {% endblock %}

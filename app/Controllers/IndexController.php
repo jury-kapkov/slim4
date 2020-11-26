@@ -17,7 +17,18 @@ class IndexController extends BaseController
         $routeParser = $routeContext->getRouteParser();
         $url = $routeParser->urlFor('index');
 
-        return $this->container->get('view')->render($response, 'index.twig', ['url' => $url]);
+        $session_record = $request->getAttribute('session');
+        $id_session = $session_record->id_session;
+        $id_visitor = $session_record->id;
+        $updated_at = $session_record->updated_at;
+        $data = [
+            'url'        => $url,
+            'id_session' => $id_session,
+            'id_visitor' => $id_visitor,
+            'updated_at' => $updated_at
+        ];
+
+        return $this->container->get('view')->render($response, 'index.twig', $data);
 
     }
 }

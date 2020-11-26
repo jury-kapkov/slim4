@@ -15,6 +15,18 @@ $settings['root'] = dirname(__DIR__);
 $settings['temp'] = $settings['root'] . '/cache';
 $settings['public'] = $settings['root'] . '/public';
 
+$settings['db_settings'] = [
+    'driver'    => 'mysql',
+    'host'      => 'localhost',
+    'database'  => 'session',
+    'username'  => 'mysql',
+    'password'  => 'mysql',
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => '',
+    'port'      => '3306',
+];
+
 // Error Handling Middleware settings
 $settings['error'] = [
 
